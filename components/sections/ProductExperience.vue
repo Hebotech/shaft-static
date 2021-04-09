@@ -1,17 +1,11 @@
 <template>
   <div
     class="p-5 d-flex flex-column justify-content-around justify-content-md-between container-fluid"
-    v-if="products"
   >
     <div class="productSection flex-column" id="#cascos">
       <h1 class="text-center helmet-title">Nueva coleccion</h1>
     </div>
     <product-circle />
-  </div>
-  <div class="container-fluid align-items-center justify-content-center" v-else>
-    <div class="spinner-grow text-warning" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
   </div>
 </template>
 

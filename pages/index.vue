@@ -27,10 +27,18 @@ export default {
     CtaButton: () => import('@/components/ui/CtaButton.vue'),
   },
 
+  async asyncData({ store, payload, params }) {
+    await store.dispatch('fetchProducts', params)
+
+    return {
+      products: store.state.products,
+    }
+  },
+
   created() {
-    this.$store.dispatch('fetchProducts', this.$route.params)
     this.scrollFix(this.$route.hash)
   },
+
   methods: {
     scrollFix(hashbang) {
       this.$nextTick(() => {
