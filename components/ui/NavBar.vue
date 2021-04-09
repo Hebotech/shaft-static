@@ -1,32 +1,39 @@
 <template>
-  <vs-navbar text-white :color="active" center-collapsed v-model="active">
+  <vs-navbar
+    shadowScroll
+    text-white
+    :color="active"
+    center-collapsed
+    v-model="active"
+  >
     <template #left>
-      <img src="/shaft-logo.svg" alt="" />
+      <img
+        src="https://shafthelmets.com/wp-content/uploads/2016/08/logo.png"
+        alt=""
+        class="img-fluid w-50 py-2"
+      />
     </template>
     <template #right>
-      <vs-navbar-item :active="active == 'primary'" id="primary">
-        Primary
-      </vs-navbar-item>
-      <vs-navbar-item :active="active == 'success'" id="success">
-        Success
-      </vs-navbar-item>
-      <vs-navbar-item :active="active == 'danger'" id="danger">
-        Danger
-      </vs-navbar-item>
-      <vs-navbar-item :active="active == 'warn'" id="warn">
-        Warn
-      </vs-navbar-item>
-      <vs-navbar-item :active="active == 'dark'" id="dark">
-        Dark
-      </vs-navbar-item>
-      <vs-navbar-item :active="active == '#7d33ff'" id="#7d33ff">
-        HEX
+      <vs-navbar-item
+        :to="`/`"
+        :active="$route.path.includes('/')"
+        id="primary"
+      >
+        Inicio
       </vs-navbar-item>
       <vs-navbar-item
-        :active="active == 'rgb(59,222,200)'"
-        id="rgb(59,222,200)"
+        :to="{ path: `/`, hash: '#cascos' }"
+        :active="$route.path.includes('/cascos')"
+        id="primary"
       >
-        RGB
+        Cascos
+      </vs-navbar-item>
+      <vs-navbar-item
+        :to="`/mapa/`"
+        :active="$route.path.includes('mapa')"
+        id="primary"
+      >
+        Distribuidores
       </vs-navbar-item>
     </template>
   </vs-navbar>
@@ -34,7 +41,7 @@
 <script>
 export default {
   data: () => ({
-    active: 'primary',
+    active: '#293a62',
   }),
-};
+}
 </script>

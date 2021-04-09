@@ -3,7 +3,7 @@
     class="hero-header container-fluid align-items-center d-flex flex-column justify-content-center"
   >
     <div
-      class="intro-website align-self-center d-flex flex-column align-items-center"
+      class="intro-website align-self-center d-flex flex-column align-items-center text-center"
     >
       <h2 class="_text">Nueva colección</h2>
       <h1 class="animate__animated animate__zoomInDown _text">
@@ -24,15 +24,15 @@ export default {
   name: 'HeroHeader',
 
   created() {
-    this.lazyLoad = true;
+    this.lazyLoad = true
   },
 
   data() {
     return {
       lazyLoad: false,
-    };
+    }
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

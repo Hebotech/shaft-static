@@ -1,8 +1,9 @@
 <template>
-  <div class="distribuidores rounded">
+  <div class="distribuidores">
     <h2 class="text-center">Tiendas Oficiales:</h2>
     <no-ssr>
       <MglMap
+        class="rounded"
         :center.sync="center"
         :accessToken="accessToken"
         :mapStyle="mapStyle"
@@ -30,15 +31,15 @@
 </template>
 
 <script>
-import { mapGetters, mapState } from 'vuex';
-import MapMarker from '@/components/ui/companies/MapMarker';
-import MapPopup from '@/components/ui/companies/MapPopup';
+import { mapGetters, mapState } from 'vuex'
+import MapMarker from '@/components/ui/companies/MapMarker'
+import MapPopup from '@/components/ui/companies/MapPopup'
 
 export default {
   name: 'distribuidoress',
 
   mounted() {
-    this.$store.dispatch('fetchCompanies');
+    this.$store.dispatch('fetchCompanies')
   },
 
   components: {
@@ -49,19 +50,19 @@ export default {
   computed: {
     countries() {
       return [...this.shaftCompanies, ...this.favCompanies].map((company) => {
-        console.log(company.properties);
+        console.log(company.properties)
         if (company.properties.country) {
-          return company.properties.country.value;
+          return company.properties.country.value
         } else {
-          return company;
+          return company
         }
-      });
+      })
     },
   },
 
   methods: {
     handleClick(object) {
-      console.log(object);
+      console.log(object)
     },
   },
 
@@ -75,7 +76,7 @@ export default {
       layerId: 'firstLayer',
       sourceId: 'firstSource',
       markerCoordinates: [19.4978, -99.1269],
-    };
+    }
   },
 
   computed: {
@@ -84,7 +85,7 @@ export default {
       mapMarkers: (state) => state.mapMarkers,
     }),
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -95,7 +96,7 @@ pre {
   min-height: 50vh;
   max-height: 60vh;
   z-index: 100;
-  background-color: #081218;
+  background-color: $navy-color;
   padding-top: 3em;
   h2 {
     font-family: shaft-h1;

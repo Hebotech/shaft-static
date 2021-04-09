@@ -7,7 +7,7 @@
     <cta-button />
     <product-experience />
 
-    <distribuidores />
+    <distribuidores ref="cascos" />
   </div>
 </template>
 
@@ -28,15 +28,28 @@ export default {
   },
 
   created() {
-    this.$store.dispatch('fetchProducts', this.$route.params);
+    this.$store.dispatch('fetchProducts', this.$route.params)
+    this.scrollFix(this.$route.hash)
+  },
+  methods: {
+    scrollFix(hashbang) {
+      this.$nextTick(() => {
+        if (this.$refs[hashbang]) {
+          console.log(this.$refs)
+          this.$refs[hashbang].scrollIntoView({
+            behaviour: 'smooth',
+          })
+        }
+      })
+    },
   },
 
   data() {
     return {
       enterProducts: false,
-    };
+    }
   },
-};
+}
 </script>
 
 <style lang="scss">

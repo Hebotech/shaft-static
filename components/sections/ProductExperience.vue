@@ -3,7 +3,7 @@
     class="p-5 d-flex flex-column justify-content-around justify-content-md-between container-fluid"
     v-if="products"
   >
-    <div class="productSection flex-column">
+    <div class="productSection flex-column" id="#cascos">
       <h1 class="text-center helmet-title">Nueva coleccion</h1>
     </div>
     <product-circle />
@@ -16,10 +16,10 @@
 </template>
 
 <script>
-import { productHelmetMixin } from '@/mixins/productHelmetsMixin';
+import { productHelmetMixin } from '@/mixins/productHelmetsMixin'
 
-import ProductCircle from '@/components/sections/product/ProductCircle.vue';
-import ProductTitles from '@/components/sections/product/ProductTitles.vue';
+import ProductCircle from '@/components/sections/product/ProductCircle.vue'
+import ProductTitles from '@/components/sections/product/ProductTitles.vue'
 
 export default {
   name: 'ProductExperience',
@@ -28,7 +28,7 @@ export default {
   },
 
   mixins: [productHelmetMixin],
-};
+}
 </script>
 
 <style lang="scss" scoped>
