@@ -21,13 +21,13 @@
       >
         Inicio
       </vs-navbar-item>
-      <vs-navbar-item
+      <!-- <vs-navbar-item
         :to="{ path: `/`, hash: '#cascos' }"
         :active="$route.path.includes('/cascos')"
         id="primary"
       >
         Cascos
-      </vs-navbar-item>
+      </vs-navbar-item> -->
       <vs-navbar-item
         :to="`/mapa/`"
         :active="$route.path.includes('mapa')"
