@@ -17,12 +17,17 @@ export default {
         content:
           '¡Nueva colección disponible!😍 Entra ahora a la página oficial de Shaft Helmets México y descubre la nueva colección 🔥 de cascos, encuentra dónde comprar 🗺 o vende Shaft 🤑',
       },
-      { property: 'og:url', content: 'https://www.shaft.mx' },
+      {
+        property: 'og:url',
+        hid: 'description',
+        content: 'https://www.shaft.mx',
+      },
       { property: 'fb:app_id', content: '1198760310313529' },
       { property: 'og:type', content: 'website' },
       { property: 'og:title', content: 'Cascos Shaft México 🏍😎🇲🇽' },
       {
         property: 'og:description',
+        hid: 'og:description',
         content:
           '¡Nueva colección! Descubre la nueva colección 	&#57629;, encuentra dónde comprar 🗺 o vende Shaft 🤑',
       },

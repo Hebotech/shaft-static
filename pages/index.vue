@@ -17,6 +17,17 @@
 export default {
   name: 'Home',
 
+  head: {
+    title: 'Cascos Shaft México 🏍😎🇲🇽 | Sitio Oficial Shaft',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Home page description',
+      },
+    ],
+  },
+
   components: {
     HeroHeader: () => import('@/components/sections/HeroHeader.vue'),
 
