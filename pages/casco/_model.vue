@@ -40,19 +40,16 @@ export default {
   },
 
   mounted() {
-    console.log(this.product)
+    this.$store.dispatch('fetchProducts', this.$route.params)
   },
 
   async asyncData({ store, payload, params }) {
-    if (payload) return { product: payload }
-    else {
-      await store.dispatch('fetchProducts', params)
+    await store.dispatch('fetchProducts', params)
 
-      return {
-        product: store.state.products.find(
-          (prod) => prod.slug === params.model
-        ),
-      }
+    return {
+      product: store.state.products.find(
+        (product) => product.slug === params.model
+      ),
     }
   },
 }

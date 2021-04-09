@@ -110,7 +110,7 @@ export const mutations = {
 }
 export const actions = {
   async fetchProducts({ commit, state }, helmet) {
-    return new Promise(async (res, rej) => {
+    await new Promise(async (res, rej) => {
       let {
         data: { data: allProducts },
       } = await axios.get(`${urlBase}/`)
@@ -160,8 +160,9 @@ export const actions = {
         }
       )
       commit('SET_FETCHED_PRODUCTS', products)
-      res(true)
+      res(products)
     })
+    return state.products
   },
 
   async fetchCompanies({ commit, state, dispatch }) {

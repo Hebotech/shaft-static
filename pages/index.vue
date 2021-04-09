@@ -4,7 +4,9 @@
     :class="$route.name === 'product-modal' ? 'blurIn' : ''"
   >
     <hero-header />
+
     <cta-button />
+
     <product-experience />
 
     <distribuidores ref="cascos" />
