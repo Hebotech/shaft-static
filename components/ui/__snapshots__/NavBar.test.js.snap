@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar ui components Navbar is the same with the logo 1`] = `
+<nav
+  class="navbar navbar-light bg-light bg-transparent"
+>
+  <a
+    class="navbar-brand"
+    href="#"
+  >
+    <img
+      alt="splash-Shaft image"
+      class="d-inline-block align-top img-fluid"
+      src="@/assets/brand/logo.png"
+      width="150px"
+    />
+  </a>
+</nav>
+`;

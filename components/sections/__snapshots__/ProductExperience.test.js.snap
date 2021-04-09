@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product experience section Same products 1`] = `
+"<div class=\\"
+    d-flex
+    flex-column
+    justify-content-around
+    justify-content-md-between
+    container-fluid
+  \\">
+  <transition-stub mode=\\"out-in\\" enteractiveclass=\\"animated flip\\">
+    <div class=\\"bg-svg\\"></div>
+  </transition-stub>
+  <h1>
+
+  </h1>
+  <div class=\\"productSection row\\">
+    <product-titles-stub class=\\"pt\\"></product-titles-stub>
+    <product-circle-stub></product-circle-stub>
+    <product-description-stub></product-description-stub>
+  </div>
+</div>"
+`;

@@ -1,0 +1,295 @@
+ [
+      {
+        "name": "SOLID",
+        "description": "Ésta es la súper descripción del producto 3",
+        "active": true,
+        "model": "SH-211",
+        "certificates": ["../certificates/3.png", "../certificates/1.png", "../certificates/2.png"],
+        "images": [
+          "../products/SH211/3.png",
+          "../products/SH211/1.png",
+          "../products/SH211/2.png"
+        ],
+        "index": 0
+      },
+
+      {
+        "name": "Flow",
+        "description": "Ésta es la súper descripción del producto 1",
+        "active": false,
+        "model": "SH-227",
+        "certificates": [
+          "https://shafthelmets.com/wp-content/uploads/2016/08/1-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/12-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/SAT-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/2-5-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-2-300x300.png"
+        ],
+        "images": [
+          "../products/SH227/FLOW/1.png",
+          "../products/SH227/FLOW/2.png",
+          "../products/SH227/FLOW/3.png",
+          "../products/SH227/FLOW/4.png",
+          "../products/SH227/FLOW/5.png",
+          "../products/SH227/FLOW/6.png",
+          "../products/SH227/FLOW/7.png",
+          "../products/SH227/FLOW/8.png"
+        ],
+        "index": 1
+      },
+
+      {
+        "name": "Neocamo",
+        "description": "Ésta es la súper descripción del producto 2",
+        "active": false,
+        "model": "SH-502",
+        "certificates": [
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-2-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/9-compressor-300x300.png",
+        ],
+        "images": [
+         "../products/SH502/NEOCAMO/1.png",
+         "../products/SH502/NEOCAMO/2.png",
+         "../products/SH502/NEOCAMO/3.png",
+         "../products/SH502/NEOCAMO/4.png",
+         "../products/SH502/NEOCAMO/5.png",
+         "../products/SH502/NEOCAMO/6.png",
+         "../products/SH502/NEOCAMO/7.png",
+         "../products/SH502/NEOCAMO/8.png"
+        ],
+        "index": 2
+      },
+
+      {
+        "name": "Rubber",
+        "description": "Ésta es la súper descripción del producto 4",
+        "active": false,
+        "model": "SH-502",
+        "certificates": [
+          "https://shafthelmets.com/wp-content/uploads/2016/08/5-1-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/1-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/12-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/SAT-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/2-5-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-2-300x300.png"
+        ],
+        "images": [
+          "../products/SH502/RUBBER/1.png",
+          "../products/SH502/RUBBER/2.png",
+          "../products/SH502/RUBBER/3.png",
+          "../products/SH502/RUBBER/4.png",
+          "../products/SH502/RUBBER/5.png",
+          "../products/SH502/RUBBER/6.png"
+        ],
+        "index": 3
+      },
+
+      {
+        "name": "predator",
+        "description": "Ésta es la súper descripción del 5",
+        "active": false,
+        "model": "SH-581",
+        "certificates": [
+          "https://shafthelmets.com/wp-content/uploads/2016/08/5-1-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/1-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/12-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/SAT-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/2-5-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-2-300x300.png"
+        ],
+        "images": [
+          "../products/SH581/1.png",
+          "../products/SH581/2.png",
+          "../products/SH581/3.png",
+          "../products/SH581/4.png",
+          "../products/SH581/5.png"
+        ],
+        "index": 4
+      },
+
+      {
+        "name": "Liberty",
+        "description": "Ésta es la súper descripción del 5",
+        "active": false,
+        "model": "SH-3690",
+        "certificates": [
+          "https://shafthelmets.com/wp-content/uploads/2016/08/5-1-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/1-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/12-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/SAT-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/2-5-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-2-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/32-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/9-compressor.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/13-compressor.png"
+        ],
+        "images": [
+          "../products/SH3690/LIBERTY/1.png",
+          "../products/SH3690/LIBERTY/2.png",
+          "../products/SH3690/LIBERTY/3.png",
+          "../products/SH3690/LIBERTY/4.png",
+          "../products/SH3690/LIBERTY/5.png",
+          "../products/SH3690/LIBERTY/6.png",
+          "../products/SH3690/LIBERTY/7.png",
+          "../products/SH3690/LIBERTY/8.png",
+          "../products/SH3690/LIBERTY/9.png"
+        ],
+        "index": 5,
+      },
+
+      {
+        "name": "Patriot",
+        "description": "Ésta es la súper descripción del 5",
+        "active": false,
+        "model": "SH-3690",
+        "certificates": [
+          "https://shafthelmets.com/wp-content/uploads/2016/08/5-1-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/1-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/12-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/SAT-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/2-5-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-2-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/32-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/9-compressor.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/13-compressor.png"
+        ],
+        "images": [
+          "../products/SH3690/PATRIOT/1.png",
+          "../products/SH3690/PATRIOT/2.png",
+          "../products/SH3690/PATRIOT/3.png",
+          "../products/SH3690/PATRIOT/4.png",
+          "../products/SH3690/PATRIOT/5.png",
+          "../products/SH3690/PATRIOT/6.png",
+          "../products/SH3690/PATRIOT/7.png",
+          "../products/SH3690/PATRIOT/8.png",
+          "../products/SH3690/PATRIOT/9.png"
+        ],
+        "index": 6
+      },
+
+      {
+        "name": "Shinner",
+        "description": "Ésta es la súper descripción del 5",
+        "active": false,
+        "model": "SH-3690",
+        "glow":true,
+        "certificates": [
+          "https://shafthelmets.com/wp-content/uploads/2016/08/5-1-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/1-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/12-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/SAT-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/2-5-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-2-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/32-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/9-compressor.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/13-compressor.png"
+        ],
+        "images": [
+          "../products/SH3690/SHINNER/0.png",
+          "../products/SH3690/SHINNER/1.png",
+          "../products/SH3690/SHINNER/2.png",
+          "../products/SH3690/SHINNER/3.png",
+          "../products/SH3690/SHINNER/4.png",
+          "../products/SH3690/SHINNER/5.png",
+          "../products/SH3690/SHINNER/6.png"
+        ],
+        "index": 7
+      },
+
+      {
+        "name": "Astute",
+        "description": "Ésta es la súper descripción del 5",
+        "active": false,
+        "model": "SH-3690",
+        "certificates": [
+          "https://shafthelmets.com/wp-content/uploads/2016/08/5-1-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/1-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/12-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/SAT-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/2-5-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-2-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/32-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/9-compressor.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/13-compressor.png"
+        ],
+        "images": [
+          "../products/SHPRO610/ASTUTE/1.png",
+          "../products/SHPRO610/ASTUTE/2.png",
+          "../products/SHPRO610/ASTUTE/3.png",
+          "../products/SHPRO610/ASTUTE/4.png",
+          "../products/SHPRO610/ASTUTE/5.png",
+          "../products/SHPRO610/ASTUTE/6.png",
+          "../products/SHPRO610/ASTUTE/7.png",
+          "../products/SHPRO610/ASTUTE/8.png"
+        ],
+        "index": 8
+      },
+
+      {
+        "name": "Neotradi",
+        "description": "Ésta es la súper descripción del 5",
+        "active": false,
+        "model": "SH-PRO610",
+        "bolsa":true,
+        "certificates": [
+          "https://shafthelmets.com/wp-content/uploads/2016/09/31-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/17-compressor.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/2-5-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/5-1-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/1-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/12-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/SAT-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/2-5-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-2-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/9-compressor.png"
+        ],
+        "images": [
+          "../products/SHPRO610/NEOTRADI/1.png",
+          "../products/SHPRO610/NEOTRADI/2.png",
+          "../products/SHPRO610/NEOTRADI/3.png",
+          "../products/SHPRO610/NEOTRADI/4.png",
+          "../products/SHPRO610/NEOTRADI/5.png",
+          "../products/SHPRO610/NEOTRADI/6.png",
+          "../products/SHPRO610/NEOTRADI/7.png",
+          "../products/SHPRO610/NEOTRADI/8.png"
+        ],
+        "index": 9
+      },
+
+      {
+        "name": "SOLID",
+        "description": "Ésta es la súper descripción del 5",
+        "active": false,
+        "model": "SH-PRO610",
+        "bolsa": true,
+        "certificates": [
+           "https://shafthelmets.com/wp-content/uploads/2016/09/31-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/17-compressor.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/2-5-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/5-1-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/1-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/12-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/SAT-compressor-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/2-5-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-1-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/08/3-2-300x300.png",
+          "https://shafthelmets.com/wp-content/uploads/2016/09/9-compressor.png"
+        ],
+        "images": [
+          "../products/SHPRO610/SOLID/1.png",
+          "../products/SHPRO610/SOLID/2.png",
+          "../products/SHPRO610/SOLID/3.png",
+          "../products/SHPRO610/SOLID/4.png",
+          "../products/SHPRO610/SOLID/5.png"
+        ],
+        "index": 10
+      }]

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`All products components from sections [sections/product] MainProduct 1`] = `
+"<div>
+  <!---->
+  <div class=\\"circle\\"></div>
+</div>"
+`;
+
+exports[`All products components from sections MainProduct 1`] = `
+"<div>
+  <!---->
+  <div class=\\"circle\\"></div>
+</div>"
+`;

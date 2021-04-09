@@ -1,0 +1,23 @@
+<template>
+ <g>
+<path class="animate-svg" d="M10.1036 299.896C17.5394 307.32 27.4447 310.225 37.1431 309.468L137.955 551L183.942 551L183.942 0.107407L137.955 0.107403L37.1431 241.639C27.4447 240.875 17.5394 243.795 10.1036 251.211C-3.36782 264.66 -3.36782 286.448 10.1036 299.896Z" fill="#DDF64C"/>
+<path d="M413.867 367.367L459.855 367.367L459.855 183.734L413.867 183.734L413.867 367.367Z" fill="#DDF64C"/>
+<path d="M321.898 459.187L367.886 459.187L367.886 91.9274L321.898 91.9274L321.898 459.187Z" fill="#DDF64C"/>
+<path d="M229.923 344.415L275.911 344.415L275.911 206.692L229.923 206.692L229.923 344.415Z" fill="#DDF64C"/>
+</g>
+
+</template>
+
+<script>
+import {svgAnimations} from '@/mixins/svgAnimations';
+
+
+  export default {
+    name: 'SH-PRO-610-ASTUTE',
+  mixins:[svgAnimations]
+  }
+</script>
+
+<style lang="scss" scoped>
+
+</style>
