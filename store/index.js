@@ -1,5 +1,5 @@
-import axios from 'axios';
-const urlBase = 'https://apihebo.online/shaft';
+import axios from 'axios'
+const urlBase = 'https://apihebo.online/shaft'
 
 export const state = () => ({
   allCompanies: [],
@@ -13,20 +13,20 @@ export const state = () => ({
   mapMarkers: [],
 
   products: null,
-});
+})
 
 export const getters = {
   firstProduct: (state) =>
     state.products ? state.products[2].images[0] : '/products/SH211/3.png',
 
   nonActiveProducts: (state) => {
-    return state.products.filter((product) => product.active === false);
+    return state.products.filter((product) => product.active === false)
   },
 
   activeProduct: (state) => {
     return state.products
       ? state.products.find((product) => product.active === true)
-      : null;
+      : null
   },
 
   favPropertyCompanies: (state) => {
@@ -34,13 +34,13 @@ export const getters = {
       (company) =>
         company.properties.fav !== undefined &&
         company.properties.name !== undefined
-    );
+    )
   },
 
   favCompanies: (state, getters) => {
     return getters.favPropertyCompanies.filter(
       (company) => company.properties.fav.value === 'true'
-    );
+    )
   },
 
   shaftPropertyCompanies: (state) => {
@@ -48,7 +48,7 @@ export const getters = {
       (company) =>
         company.properties.shaft !== undefined &&
         company.properties.name !== undefined
-    );
+    )
   },
 
   shaftCompanies: (state, getters) => {
@@ -57,117 +57,117 @@ export const getters = {
         company.properties.shaft.value === 'true' &&
         company.properties.fav &&
         company.properties.fav.value !== 'true'
-    );
+    )
   },
-};
+}
 
 export const mutations = {
   SET_ALL_COMPANIES(state, allCompanies) {
-    state.allCompanies = allCompanies;
+    state.allCompanies = allCompanies
   },
 
   SET_ACTIVE_COMPANY(state, company) {
-    state.activeCompany = company;
+    state.activeCompany = company
   },
 
   SET_FETCHED_PRODUCTS(state, allProducts) {
-    state.products = allProducts;
+    state.products = allProducts
   },
 
   SET_ACTIVE_PRODUCT(state, indexProduct) {
-    state.products[indexProduct].active = true;
+    state.products[indexProduct].active = true
   },
 
   DEACTIVATE_PRODUCTS(state) {
     state.products.forEach((product) => {
-      product.active = false;
-    });
+      product.active = false
+    })
   },
 
   SELECT_ACTIVE_PRODUCT(state, index) {
-    state.products[index].active = true;
+    state.products[index].active = true
   },
 
   ADDING_COUNTER(state) {
-    state.counter += 1;
+    state.counter += 1
   },
 
   SUBSTRACTING_COUNTER(state) {
-    state.counter -= 1;
+    state.counter -= 1
   },
 
   RESTART_COUNTER(state) {
-    state.counter = 0;
+    state.counter = 0
   },
 
   IMAGES_LENGTH(state, length) {
-    state.counter = length;
+    state.counter = length
   },
 
   SET_MAP_MARKERS(state, markersArray, index) {
-    state.mapMarkers.push(markersArray);
+    state.mapMarkers.push(markersArray)
   },
-};
+}
 export const actions = {
   async fetchProducts({ commit, state }, helmet) {
-    new Promise((res, rej) => {
+    new Promise(async (res, rej) => {
       let {
-      data: { data: allProducts },
-    } = await axios.get(`${urlBase}/`);
+        data: { data: allProducts },
+      } = await axios.get(`${urlBase}/`)
 
-    let products = allProducts.map(
-      (
-        {
-          images: imagesArray,
-          meta_data,
-          description,
-          short_description,
-          slug,
-        },
-        index
-      ) => {
-        let images = imagesArray.map((image) => image.src);
+      let products = allProducts.map(
+        (
+          {
+            images: imagesArray,
+            meta_data,
+            description,
+            short_description,
+            slug,
+          },
+          index
+        ) => {
+          let images = imagesArray.map((image) => image.src)
 
-        let certificates = meta_data
-          .find((d) => d.key === 'certificados_shaft')
-          .value.split('|');
+          let certificates = meta_data
+            .find((d) => d.key === 'certificados_shaft')
+            .value.split('|')
 
-        let model = meta_data.find((d) => d.key === 'modelo_shaft').value;
+          let model = meta_data.find((d) => d.key === 'modelo_shaft').value
 
-        let name = meta_data.find((d) => d.key === 'grafico_shaft').value;
+          let name = meta_data.find((d) => d.key === 'grafico_shaft').value
 
-        let isActive = () => {
-          if (Object.keys(helmet).length !== 0) {
-            console.log(helmet);
-            return name === helmet.graphic && model === helmet.model;
-          } else {
-            console.log(index, helmet);
-            return index === 0;
+          let isActive = () => {
+            if (Object.keys(helmet).length !== 0) {
+              console.log(helmet)
+              return name === helmet.graphic && model === helmet.model
+            } else {
+              console.log(index, helmet)
+              return index === 0
+            }
           }
-        };
 
-        return {
-          name,
-          active: isActive(),
-          index,
-          slug,
-          description,
-          short_description,
-          images,
-          certificates,
-          model,
-        };
-      }
-      );
-      commit('SET_FETCHED_PRODUCTS', products);
+          return {
+            name,
+            active: isActive(),
+            index,
+            slug,
+            description,
+            short_description,
+            images,
+            certificates,
+            model,
+          }
+        }
+      )
+      commit('SET_FETCHED_PRODUCTS', products)
       res(true)
     })
   },
 
   async fetchCompanies({ commit, state, dispatch }) {
-    const allCompanies = await axios.get(`${urlBase}/companies`);
-    commit('SET_ALL_COMPANIES', allCompanies.data.data.companies);
-    dispatch('setMapMarkets');
+    const allCompanies = await axios.get(`${urlBase}/companies`)
+    commit('SET_ALL_COMPANIES', allCompanies.data.data.companies)
+    dispatch('setMapMarkets')
   },
 
   async setMapMarkets({ commit, state }) {
@@ -181,7 +181,7 @@ export const actions = {
               data: { coordinates },
             } = await axios.post('https://apihebo.online/locations', {
               address: address || '',
-            });
+            })
 
             let finalObject = {
               name: company.name.value,
@@ -192,16 +192,16 @@ export const actions = {
               fav: company.fav ? company.fav.value : false,
               address: address,
               coordinates,
-            };
+            }
 
             if (coordinates && coordinates[0])
-              commit('SET_MAP_MARKERS', finalObject);
+              commit('SET_MAP_MARKERS', finalObject)
 
-            return finalObject;
-          });
-        return coordinatesArray;
-      });
-    return coordinates;
+            return finalObject
+          })
+        return coordinatesArray
+      })
+    return coordinates
   },
 
   findAndActivateProduct(
@@ -210,11 +210,11 @@ export const actions = {
   ) {
     let routerProduct = state.products
       .filter((product) => product.model === model)
-      .find((product) => product.name === name);
+      .find((product) => product.name === name)
 
     if (routerProduct) {
-      commit('DEACTIVATE_PRODUCTS');
-      commit('SET_ACTIVE_PRODUCT', routerProduct.index);
+      commit('DEACTIVATE_PRODUCTS')
+      commit('SET_ACTIVE_PRODUCT', routerProduct.index)
     }
   },
 
@@ -230,7 +230,7 @@ export const actions = {
             },
           ],
         }
-      );
+      )
     } else {
       const firstClickUpdate = await axios.put(
         `${urlBase}/companies/${toUpdate}`,
@@ -242,32 +242,32 @@ export const actions = {
             },
           ],
         }
-      );
+      )
     }
   },
 
   nextProduct({ commit, state, getters }) {
-    commit('RESTART_COUNTER');
-    const indexProduct = getters.activeProduct.index;
-    commit('DEACTIVATE_PRODUCTS');
+    commit('RESTART_COUNTER')
+    const indexProduct = getters.activeProduct.index
+    commit('DEACTIVATE_PRODUCTS')
 
     if (indexProduct + 1 <= state.products.length - 1) {
-      commit('SET_ACTIVE_PRODUCT', indexProduct + 1);
+      commit('SET_ACTIVE_PRODUCT', indexProduct + 1)
     } else {
-      commit('SET_ACTIVE_PRODUCT', 0);
+      commit('SET_ACTIVE_PRODUCT', 0)
     }
   },
 
   lastProduct({ commit, state, getters }) {
-    commit('RESTART_COUNTER');
-    const indexProduct = getters.activeProduct.index;
+    commit('RESTART_COUNTER')
+    const indexProduct = getters.activeProduct.index
 
-    commit('DEACTIVATE_PRODUCTS');
+    commit('DEACTIVATE_PRODUCTS')
 
     if (indexProduct - 1 >= 0) {
-      commit('SET_ACTIVE_PRODUCT', indexProduct - 1);
+      commit('SET_ACTIVE_PRODUCT', indexProduct - 1)
     } else {
-      commit('SET_ACTIVE_PRODUCT', state.products.length - 1);
+      commit('SET_ACTIVE_PRODUCT', state.products.length - 1)
     }
   },
-};
+}
