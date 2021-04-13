@@ -1,6 +1,6 @@
 <template>
   <div class="lista-container">
-    <table class="table">
+    <table class="table table-dark table-striped">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -18,7 +18,7 @@
           <td>
             <ul class="list-group">
               <li
-                class="list-group-item"
+                class="list-group-item text-dark"
                 v-for="direccion in company.address"
                 :key="direccion"
               >
