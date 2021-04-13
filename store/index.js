@@ -174,6 +174,10 @@ export const actions = {
   async setMapMarkets({ commit, state }) {
     const coordinates = await state.allCompanies
       .filter((c) => c.properties.address && c.properties.address.value !== '')
+      .filter((c) => c.properties.fav && c.properties.fav.value === 'true')
+      .filter((company) => {
+        return company.properties.fav && company.properties.fav.value === 'true'
+      })
       .flatMap(async ({ properties: company }, index) => {
         let coordinatesArray = await company.address.value
           .split(',')
