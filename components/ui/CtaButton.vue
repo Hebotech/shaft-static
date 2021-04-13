@@ -2,7 +2,7 @@
   <div class="row m-0 justify-content-center justify-content-lg-start pl-lg-4">
     <router-link
       @click="ctaAction({ category: 'Contigo', tag: 'CTA Home' })"
-      class="animate__animated animate__wobble animate__delay-2s cta text-center "
+      class="animate__animated animate__wobble animate__delay-2s cta text-center"
       to="/nuevo-distribuidor"
     >
       ¡Distribuye Shaft!
@@ -15,10 +15,10 @@ export default {
   name: 'CtaButton',
   methods: {
     ctaAction({ category, tag }) {
-      this.$ga.event(category, 'click', tag);
+      this.$ga.event(category, 'click', tag)
     },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

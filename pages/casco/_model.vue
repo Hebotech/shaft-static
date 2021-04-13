@@ -1,6 +1,5 @@
 <template>
   <div class="model-view p-0 container d-flex justify-content-around flex-wrap">
-    <cta-button />
     <div class="row mx-0 justify-content-around align-items-center">
       <div class="col-9 mt-md-5">
         <h1 class="text-center">
@@ -18,6 +17,7 @@
         <h2>Certificaciones</h2>
       </div>
       <div class="row my-3 m-0 flex-nowrap overflow-auto">
+        <cta-button />
         <div
           class="col-4"
           v-for="(item, index) in product.certificates"
