@@ -173,21 +173,22 @@ export const actions = {
 
   async setMapMarkets({ commit, state }) {
     const coordinates = await state.allCompanies
-      .filter((c) => c.properties.address && c.properties.address.value !== '')
       .filter((c) => c.properties.fav && c.properties.fav.value === 'true')
       .filter((company) => {
         return company.properties.fav && company.properties.fav.value === 'true'
       })
+      .filter((company) => {
+        return (
+          company.properties.ubicaciones_mapa &&
+          company.properties.ubicaciones_mapa.value.length &&
+          company.properties.ubicaciones_mapa.value !== ''
+        )
+      })
       .flatMap(async ({ properties: company }, index) => {
-        let coordinatesArray = await company.address.value
-          .split(',')
+        let coordinatesArray = company.ubicaciones_mapa.value
+          .split(';')
           .map(async (address) => {
-            let {
-              data: { coordinates },
-            } = await axios.post('https://apihebo.online/locations', {
-              address: address || '',
-            })
-
+            let coordinates = address.split(',').reverse()
             let finalObject = {
               name: company.name.value,
               website: company.website ? company.website.value : null,
@@ -195,12 +196,11 @@ export const actions = {
                 ? company.description.value
                 : null,
               fav: company.fav ? company.fav.value : false,
-              address: address,
+              address: company.address.value,
               coordinates,
             }
 
-            if (coordinates && coordinates[0])
-              commit('SET_MAP_MARKERS', finalObject)
+            commit('SET_MAP_MARKERS', finalObject)
 
             return finalObject
           })

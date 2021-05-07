@@ -13,7 +13,7 @@
 
         <MglMarker
           v-for="marker in mapMarkers"
-          :key="marker.coordinates[0]"
+          :key="marker.coordinates"
           :coordinates="marker.coordinates"
           color="#DDFF00"
           class="w-25"

@@ -7,10 +7,11 @@
           <th scope="col">Nombre</th>
           <th scope="col">Sitio web</th>
           <th scope="col">Dirección</th>
+          <th scope="col">Coordenadas</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(company, index) in companies" :key="company.id">
+        <tr v-for="(company, index) in markers" :key="company.name">
           <th scope="row">{{ index + 1 }}</th>
           <td>{{ company.name }}</td>
           <td>{{ company.website }}</td>
@@ -19,12 +20,22 @@
             <ul class="list-group">
               <li
                 class="list-group-item text-dark"
-                v-for="direccion in company.address"
+                v-for="direccion in company.address.split(',')"
                 :key="direccion"
               >
                 {{ direccion }}
               </li>
             </ul>
+          </td>
+          <td>
+            <a
+              class="text-light"
+              :href="`https://www.latlong.net/convert-address-to-lat-long.html?long=${company.coordinates[1]}&lat=${company.coordinates[0]}`"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ company.coordinates }}
+            </a>
           </td>
         </tr>
       </tbody>
@@ -38,6 +49,12 @@ export default {
 
   mounted() {
     this.$store.dispatch('fetchCompanies')
+  },
+
+  filters: {
+    stringCood: function (value) {
+      return value.reverse().join(',')
+    },
   },
 
   computed: {
