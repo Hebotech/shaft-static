@@ -174,9 +174,7 @@ export const actions = {
   async setMapMarkets({ commit, state }) {
     const coordinates = await state.allCompanies
       .filter((c) => c.properties.fav && c.properties.fav.value === 'true')
-      .filter((company) => {
-        return company.properties.fav && company.properties.fav.value === 'true'
-      })
+
       .filter((company) => {
         return (
           company.properties.ubicaciones_mapa &&
@@ -187,8 +185,9 @@ export const actions = {
       .flatMap(async ({ properties: company }, index) => {
         let coordinatesArray = company.ubicaciones_mapa.value
           .split(';')
-          .map(async (address) => {
+          .map(async (address, index) => {
             let coordinates = address.split(',').reverse()
+
             let finalObject = {
               name: company.name.value,
               website: company.website ? company.website.value : null,
@@ -196,7 +195,7 @@ export const actions = {
                 ? company.description.value
                 : null,
               fav: company.fav ? company.fav.value : false,
-              address: company.address.value,
+              address: company.address.value.split(',')[index],
               coordinates,
             }
 
