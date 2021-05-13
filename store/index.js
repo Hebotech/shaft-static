@@ -195,7 +195,7 @@ export const actions = {
                 ? company.description.value
                 : null,
               fav: company.fav ? company.fav.value : false,
-              address: company.address.value.split(',')[index],
+              address: company.address.value.split(';')[index],
               coordinates,
             }
 
