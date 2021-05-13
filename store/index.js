@@ -173,8 +173,6 @@ export const actions = {
 
   async setMapMarkets({ commit, state }) {
     const coordinates = await state.allCompanies
-      .filter((c) => c.properties.fav && c.properties.fav.value === 'true')
-
       .filter((company) => {
         return (
           company.properties.ubicaciones_mapa &&
