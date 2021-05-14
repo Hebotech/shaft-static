@@ -175,9 +175,9 @@ export const actions = {
     const coordinates = await state.allCompanies
       .filter((company) => {
         return (
-          company.address &&
-          company.address.value &&
-          company.address.value.length
+          company.properties.address &&
+          company.properties.address.value &&
+          company.properties.address.value.length
         )
       })
       .filter((company) => {
