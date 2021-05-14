@@ -23,6 +23,14 @@
         >
           Ver sitio web
         </a>
+        <a
+          rel="noopener"
+          :href="`http://www.google.com/maps/place/${coordinates[1]},${coordinates[0]}`"
+          class="btn border-0 animated fadeInDown slower"
+          target="_blank"
+        >
+          Ir a dirección
+        </a>
       </div>
     </div>
   </div>
@@ -46,8 +54,11 @@ export default {
     address: {
       type: String,
     },
+    coordinates: {
+      type: Array,
+    },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

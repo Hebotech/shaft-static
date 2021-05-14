@@ -17,10 +17,10 @@
           <td>{{ company.website }}</td>
 
           <td>
-            <ul class="list-group">
+            <ul class="list-group" v-if="company.address">
               <li
                 class="list-group-item text-dark"
-                v-for="direccion in company.address.split(',')"
+                v-for="direccion in company.address.split(';')"
                 :key="direccion"
               >
                 {{ direccion }}

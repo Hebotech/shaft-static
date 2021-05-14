@@ -177,7 +177,7 @@ export const actions = {
         return (
           company.properties.address &&
           company.properties.address.value &&
-          company.properties.address.value.length
+          company.properties.address.value !== ''
         )
       })
       .filter((company) => {
@@ -189,9 +189,10 @@ export const actions = {
       })
       .flatMap(async ({ properties: company }, index) => {
         let coordinatesArray = company.ubicaciones_mapa.value
+          .replace(/\s+/g, '')
           .split(';')
-          .map(async (address, index) => {
-            let coordinates = address.split(',').reverse()
+          .map(async (coordine, index) => {
+            let coordinates = coordine.replace(/\s+/g, '').split(',').reverse()
 
             let finalObject = {
               name: company.name.value,
@@ -210,6 +211,7 @@ export const actions = {
           })
         return coordinatesArray
       })
+
     return coordinates
   },
 
