@@ -46,7 +46,9 @@ export default {
   },
 
   async asyncData({ store, payload, params }) {
-    await store.dispatch('fetchProducts', params)
+    if (!store.state.products) {
+      await store.dispatch('fetchProducts', params)
+    }
 
     return {
       product: store.state.products.find(
