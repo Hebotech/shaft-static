@@ -174,7 +174,11 @@ export const actions = {
   async setMapMarkets({ commit, state }) {
     const coordinates = await state.allCompanies
       .filter((company) => {
-        return company.address.value && company.address.value.length
+        return (
+          company.address &&
+          company.address.value &&
+          company.address.value.length
+        )
       })
       .filter((company) => {
         return (
