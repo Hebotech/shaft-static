@@ -3,7 +3,7 @@
     class="home position-relative"
     :class="$route.name === 'product-modal' ? 'blurIn' : ''"
   >
-    <hero-header />
+    <hero-header :brandInfo="brandInfo" />
 
     <cta-button />
 
@@ -43,8 +43,12 @@ export default {
   async asyncData({ store, payload, params }) {
     await store.dispatch('fetchProducts', params)
 
+    let responseFetch = await fetch('https://apihebo.online/shaft/brand')
+    let responseJson = await responseFetch.json()
+
     return {
       products: store.state.products,
+      brandInfo: responseJson.data,
     }
   },
 

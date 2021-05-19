@@ -1,14 +1,17 @@
 <template>
   <div
     class="hero-header container-fluid align-items-center d-flex flex-column justify-content-center"
+    :style="`background-image: url(${brandInfo.image.src})`"
   >
     <div
       class="intro-website align-self-center d-flex flex-column align-items-center text-center"
     >
-      <h2 class="_text">Nueva colección</h2>
-      <h1 class="animate__animated animate__zoomInDown _text">
-        Descubrela ahora
-      </h1>
+      <h2
+        style="white-space: break-spaces"
+        class="_text"
+        v-text="brandInfo.description"
+      />
+
       <img
         src="/shaft-logo.svg"
         alt="shaft mexico"
@@ -27,6 +30,13 @@ export default {
     this.lazyLoad = true
   },
 
+  props: {
+    brandInfo: {
+      type: Object,
+      required: true,
+    },
+  },
+
   data() {
     return {
       lazyLoad: false,
@@ -39,7 +49,7 @@ export default {
 .hero-header {
   height: 100vh;
   background-color: $alpha;
-  background-image: url(/super.jpg);
+
   background-size: cover;
   background-position: 0 center;
   background-repeat: no-repeat;
