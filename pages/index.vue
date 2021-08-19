@@ -7,6 +7,8 @@
 
     <cta-button />
 
+    <aviso />
+
     <product-experience />
 
     <distribuidores ref="cascos" />
@@ -38,6 +40,8 @@ export default {
       import('@/components/sections/companies/distribuidores.vue'),
 
     CtaButton: () => import('@/components/ui/CtaButton.vue'),
+
+    aviso: () => import('@/components/aviso.vue'),
   },
 
   async asyncData({ store, payload, params }) {
@@ -52,23 +56,6 @@ export default {
     }
   },
 
-  created() {
-    this.scrollFix(this.$route.hash)
-  },
-
-  methods: {
-    scrollFix(hashbang) {
-      this.$nextTick(() => {
-        if (this.$refs[hashbang]) {
-          console.log(this.$refs)
-          this.$refs[hashbang].scrollIntoView({
-            behaviour: 'smooth',
-          })
-        }
-      })
-    },
-  },
-
   data() {
     return {
       enterProducts: false,
@@ -80,6 +67,7 @@ export default {
 <style lang="scss">
 .home {
   transition: filter 0.5s ease-in;
+
   &.blurIn {
     & > *:not(.modal-product) {
       transition: all 0.5s ease-out;

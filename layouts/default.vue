@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 :root {
   --vs-primary: #dfff00;
   --vs-success: 23, 201, 100;
@@ -57,14 +57,13 @@ export default {
 
 #nav {
   padding: 30px;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
